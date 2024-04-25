@@ -11,5 +11,5 @@ while true do
             fireclickdetector(v.ClickDetector)
         end
     end
-    wait(0.8)
+    wait(1)
 end
