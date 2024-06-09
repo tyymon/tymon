@@ -2,7 +2,54 @@
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
 local allowedPartNames = {
-"Terminus", "InvertedTerminus", "ChromaticTerminus", "Primordial", "InvertedPrimordial", "ChromaticPrimordial", "Blossom", "InvertedBlossom", "ChromaticBlossom", "Cyberspace", "InvertedCyberspace", "ChromaticCyberspace", "Hypergiant", "InvertedHypergiant", "ChromaticHypergiant", "Destiny", "InvertedDestiny", "ChromaticDestiny", "Depth", "InvertedDepth", "ChromaticDepth", "Chronos", "InvertedChronos", "ChromaticChronos", "Cosmic", "InvertedCosmic", "ChromaticCosmic", "Nuetron", "InvertedNuetron", "ChromaticNuetron", "Firewall", "InvertedFirewall", "ChromaticFirewall", "Vaporwave", "InvertedVaporwave", "ChromaticVaporwave", "Tesseract", "InvertedTesseract", "ChromaticTesseract", "Guardian", "InvertedGuardian", "ChromaticGuardian", "Seraphic", "InvertedSeraphic", "ChromaticSeraphic", "Frostbite", "InvertedFrostbite", "ChromaticFrostbite", "Demonic", "InvertedDemonic", "ChromaticDemonic", "Abyssal", "InvertedAbyssal", "ChromaticAbyssal", "Aurora", "InvertedAurora", "ChromaticAurora", "Empyrean", "InvertedEmpyrean", "ChromaticEmpyrean", "Encryption", "InvertedEncryption", "ChromaticEncryption", "Desolation", "InvertedDesolation", "ChromaticDesolation", "Entropy", "InvertedEntropy", "ChromaticEntropy", "Temporal", "InvertedTemporal", "ChromaticTemporal", "Bluescreen", "InvertedBluescreen", "ChromaticBluescreen", "Toxic", "InvertedToxic", "ChromaticToxic", "Blizzard", "InvertedBlizzard", "ChromaticBlizzard", "Omnipotent", "InvertedOmnipotent", "ChromaticOmnipotent", "Nova", "InvertedNova", "ChromaticNova", "Eruption", "InvertedEruption", "ChromaticEruption", "Soundspace", "InvertedSoundspace", "ChromaticSoundspace", "Leviathan", "InvertedLeviathan", "ChromaticLeviathan", "Divine", "InvertedDivine", "ChromaticDivine", "Lucid", "InvertedLucid", "ChromaticLucid", "Odyssey", "InvertedOdyssey", "ChromaticOdyssey", "Celestial", "InvertedCelestial", "ChromaticCelestial", "Lunar", "InvertedLunar", "ChromaticLunar", "Inferno", "InvertedInferno", "ChromaticInferno", "Glacier", "InvertedGlacier", "ChromaticGlacier", "Prototype", "InvertedPrototype", "ChromaticPrototype", "Sanctum", "InvertedSanctum", "ChromaticSanctum", "Astral", "InvertedAstral", "ChromaticAstral", "Ethereal", "InvertedEthereal", "ChromaticEthereal", "Immortal", "InvertedImmortal", "ChromaticImmortal", "Blaze", "InvertedBlaze", "ChromaticBlaze", "Polar", "InvertedPolar", "ChromaticPolar", "Syntax", "InvertedSyntax", "ChromaticSyntax", "Eternal", "InvertedEternal", "ChromaticEternal", "Nebula", "InvertedNebula", "ChromaticNebula", "Aquavortex", "InvertedAquavortex", "ChromaticAquavortex", "Pyro", "InvertedPyro", "ChromaticPyro", "Crystalize", "InvertedCrystalize", "ChromaticCrystalize", "Digital", "InvertedDigital", "ChromaticDigital", "Stellar", "InvertedStellar", "ChromaticStellar", "ExoticDiamond", "InvertedExoticDiamond", "ChromaticExoticDiamond", "Ascendant", "InvertedAscendant", "ChromaticAscendant", "Arcane", "InvertedArcane", "ChromaticArcane", "Flare", "InvertedFlare", "ChromaticFlare", "Frost", "InvertedFrost", "ChromaticFrost", "Binary", "InvertedBinary", "ChromaticBinary", "Diamond", "InvertedDiamond", "ChromaticDiamond", "Mythical", "InvertedMythical", "ChromaticMythical", "Legendary", "InvertedLegendary", "ChromaticLegendary", "Aqua", "InvertedAqua", "ChromaticAqua", "Pure", "InvertedPure", "ChromaticPure", "Dusk", "InvertedDusk", "ChromaticDusk", "Magma", "InvertedMagma", "ChromaticMagma", "Icy", "InvertedIcy", "ChromaticIcy", "Bit", "InvertedBit", "ChromaticBit", "Epic", "InvertedEpic", "ChromaticEpic", "Rare", "InvertedRare", "ChromaticRare", "Uncommon", "InvertedUncommon", "ChromaticUncommon", "Common", "InvertedCommon", "ChromaticCommon", "boCRYSTAL", "InvertedboCRYSTAL", "ChromaticboCRYSTAL", "Euphoria", "InvertedEuphoria", "ChromaticEuphoria", "Apotheosis", "InvertedApotheosis", "ChromaticApotheosis", "TheRARESTblock", "InvertedTheRARESTblock", "ChromaticTheRARESTblock", "sevenCRYSTAL", "InvertedsevenCRYSTAL", "ChromaticsevenCRYSTAL", "Fate", "InvertedFate", "ChromaticFate", "Prismatic", "InvertedPrismatic", "ChromaticPrismatic", "InvertedCommon", "InvertedInvertedCommon", "ChromaticInvertedCommon", "Gentleman", "InvertedGentleman", "ChromaticGentleman", "Millionaire", "InvertedMillionaire", "ChromaticMillionaire", "gnarp", "Invertedgnarp", "Chromaticgnarp", "TROLL", "InvertedTROLL", "ChromaticTROLL", "Harvest", "InvertedHarvest", "ChromaticHarvest", "Lovestruck", "InvertedLovestruck", "ChromaticLovestruck", "Firework", "InvertedFirework", "ChromaticFirework", "Undefined", "InvertedUndefined", "ChromaticUndefined", "Godly", "InvertedGodly", "ChromaticGodly", "Beyond", "InvertedBeyond", "ChromaticBeyond", "Purity", "InvertedPurity", "ChromaticPurity", "Glisten", "InvertedGlisten", "ChromaticGlisten", "Paragon", "InvertedParagon", "ChromaticParagon", "Serene", "InvertedSerene", "ChromaticSerene", "Solitude", "InvertedSolitude", "ChromaticSolitude", "Runic", "InvertedRunic", "ChromaticRunic", "Life", "InvertedLife", "ChromaticLife", "TidalWave", "InvertedTidalWave", "ChromaticTidalWave", "Hailstorm", "InvertedHailstorm", "ChromaticHailstorm", "Sovereign", "InvertedSovereign", "ChromaticSovereign", "Imperial", "InvertedImperial", "ChromaticImperial", "Valor", "InvertedValor", "ChromaticValor", "Aether", "InvertedAether", "ChromaticAether", "Iridescence", "InvertedIridescence", "ChromaticIridescence", "Shine", "InvertedShine", "ChromaticShine"
+    "Common","Uncommon","Rare","Epic", "Legendary", "Mythical", "Godly", "Runic", "Arcane", "Ascendant",
+    "Stellar", "Aquavortex", "Serene", "Nebula", "Eternal", "Paragon", "Immortal",
+    "Ethereal", "Astral", "Odyssey", "Lunar", "Glisten", "Celestial", "Divine",
+    "Leviathan", "Omnipotent", "Desolation", "Empyrean", "Aurora", "Abyssal",
+    "Cosmic", "Chronos", "Beyond", "Hypergiant", "Fool", "gnarp", "Gentleman",
+    "sevenCRYSTAL", "TheRARESTblock", "Icy", "Bit", "Magma", "Dusk", "Pure", "Life", "Aqua", "Diamond", "Binary", "Frost", "Flare", "Icy", "Arcane", "Runic", "Ascendant", "ExoticDiamond", "Digital", "Pyro", "Crystalize", "Solitude", "Syntax", "Polar", "Blaze", "Sanctum", "Prototype", "Glacier", "Inferno", "Lunar", "Odyssey", "Lucid", "Glisten", "Soundspace", "Eruption", "Nova", "Undefined", "Blizzard", "Toxic", "Bluescreen", "Temporal", "Entropy", "Encryption", "Demonic", "Seraphic", "Purity", "Frostbite", "Guardian", "Vaporwave", "Firewall", "Tesseract", "Nuetron", "Depth", "Destiny", "Hypergiant", "Cyberspace", "Primordial", "Terminus", "Blossom", "Prismatic", "Fate", "Apotheosis", "Euphoria", "boCRYSTAL", "Nuetron", "Millionaire", "TROLL", "Lovestruck", "Harvest", "Firework", "Content", "TidalWave", "Elysian", "Shine", "Aether", "Iridescence", "Valor", "Sovereign", "Imperial",
+    "InvertedCommon","ChromaticInvertedCommon","Andromeda","InvertedAndromeda","ChromaticAndromeda","InvertedInvertedCommon","InvertedNuetron","ChromaticNuetron","InvertedMythical",
+    "InvertedGodly","InvertedRunic","InvertedArcane","InvertedAscendant","InvertedStellar","InvertedAquavortex",
+    "InvertedSerene","InvertedNebula","InvertedEternal","InvertedParagon","InvertedImmortal","InvertedEthereal",
+    "InvertedAstral","InvertedOdyssey","InvertedLunar","InvertedGlisten","InvertedCelestial","InvertedDivine",
+    "InvertedLeviathan","InvertedOmnipotent","InvertedDesolation","InvertedEmpyrean","InvertedAurora",
+    "InvertedAbyssal","InvertedCosmic","InvertedChronos","InvertedBeyond","InvertedHypergiant","InvertedFool",
+    "Invertedgnarp","InvertedGentleman","InvertedsevenCRYSTAL","InvertedTheRARESTblock","InvertedIcy",
+    "InvertedBit","InvertedMagma","InvertedDusk","InvertedPure","InvertedLife","InvertedAqua","InvertedDiamond",
+    "InvertedBinary","InvertedFrost","InvertedFlare","InvertedIcy","InvertedArcane","InvertedRunic",
+    "InvertedAscendant","InvertedExoticDiamond","InvertedDigital","InvertedPyro","InvertedCrystalize",
+    "InvertedSolitude","InvertedSyntax","InvertedPolar","InvertedBlaze","InvertedSanctum","InvertedPrototype",
+    "InvertedGlacier","InvertedInferno","InvertedLunar","InvertedOdyssey","InvertedLucid","InvertedGlisten",
+    "InvertedSoundspace","InvertedEruption","InvertedNova","InvertedUndefined","InvertedBlizzard","InvertedToxic",
+    "InvertedBluescreen","InvertedTemporal","InvertedEntropy","InvertedEncryption","InvertedDemonic",
+    "InvertedSeraphic","InvertedPurity","InvertedFrostbite","InvertedGuardian","InvertedVaporwave",
+    "InvertedFirewall","InvertedTesseract","InvertedNeutron","InvertedDepth","InvertedDestiny","InvertedHypergiant",
+    "InvertedCyberspace","InvertedPrimordial","InvertedTerminus","InvertedBlossom","InvertedPrismatic",
+    "InvertedFate","InvertedApotheosis","InvertedEuphoria","InvertedboCRYSTAL","InvertedInvertedCommon",
+    "InvertedMillionaire","InvertedTROLL","InvertedLovestruck","InvertedHarvest","InvertedFirework",
+    "InvertedContent","InvertedTidalWave","InvertedElysian","InvertedShine","InvertedAether","InvertedIridescence",
+    "InvertedValor","InvertedSovereign","InvertedImperial",
+    "ChromaticCommon","ChromaticUncommon","ChromaticRare","ChromaticEpic","ChromaticLegendary","ChromaticMythical",
+    "ChromaticGodly","ChromaticRunic","ChromaticArcane","ChromaticAscendant","ChromaticStellar","ChromaticAquavortex",
+    "ChromaticSerene","ChromaticNebula","ChromaticEternal","ChromaticParagon","ChromaticImmortal","ChromaticEthereal",
+    "ChromaticAstral","ChromaticOdyssey","ChromaticLunar","ChromaticGlisten","ChromaticCelestial","ChromaticDivine",
+    "ChromaticLeviathan","ChromaticOmnipotent","ChromaticDesolation","ChromaticEmpyrean","ChromaticAurora",
+    "ChromaticAbyssal","ChromaticCosmic","ChromaticChronos","ChromaticBeyond","ChromaticHypergiant","ChromaticFool",
+    "Chromaticgnarp","ChromaticGentleman","ChromaticsevenCRYSTAL","ChromaticTheRARESTblock","ChromaticIcy",
+    "ChromaticBit","ChromaticMagma","ChromaticDusk","ChromaticPure","ChromaticLife","ChromaticAqua","ChromaticDiamond",
+    "ChromaticBinary","ChromaticFrost","ChromaticFlare","ChromaticIcy","ChromaticArcane","ChromaticRunic",
+    "ChromaticAscendant","ChromaticExoticDiamond","ChromaticDigital","ChromaticPyro","ChromaticCrystalize",
+    "ChromaticSolitude","ChromaticSyntax","ChromaticPolar","ChromaticBlaze","ChromaticSanctum","ChromaticPrototype",
+    "ChromaticGlacier","ChromaticInferno","ChromaticLunar","ChromaticOdyssey","ChromaticLucid","ChromaticGlisten",
+    "ChromaticSoundspace","ChromaticEruption","ChromaticNova","ChromaticUndefined","ChromaticBlizzard","ChromaticToxic",
+    "ChromaticBluescreen","ChromaticTemporal","ChromaticEntropy","ChromaticEncryption","ChromaticDemonic",
+    "ChromaticSeraphic","ChromaticPurity","ChromaticFrostbite","ChromaticGuardian","ChromaticVaporwave",
+    "ChromaticFirewall","ChromaticTesseract","ChromaticNeutron","ChromaticDepth","ChromaticDestiny","ChromaticHypergiant",
+    "ChromaticCyberspace","ChromaticPrimordial","ChromaticTerminus","ChromaticBlossom","ChromaticPrismatic",
+    "ChromaticFate","ChromaticApotheosis","ChromaticEuphoria","ChromaticboCRYSTAL","ChromaticInvertedCommon",
+    "ChromaticMillionaire","ChromaticTROLL","ChromaticLovestruck","ChromaticHarvest","ChromaticFirework",
+    "ChromaticContent","ChromaticTidalWave","ChromaticElysian","ChromaticShine","ChromaticAether","ChromaticIridescence",
+    "ChromaticValor","ChromaticSovereign","ChromaticImperial"
 }
 
 while true do
@@ -11,5 +58,5 @@ while true do
             fireclickdetector(v.ClickDetector)
         end
     end
-    wait(10)
+    wait(0.8)
 end
